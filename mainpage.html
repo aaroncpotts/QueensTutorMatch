@@ -15,6 +15,8 @@ var email = ["carlosabenada@gmail.com", "tariqmohammed@gmail.com", "martaprokofj
 var grades = [60, 80, 90, 95, 92];
 var names = ["Carlos Abenada", "Tariq Mohammed", "Marta Prokojevaite-Spigel", "John Smith", "Markov Chaney"];
 var courseCode = [2372, 2427, 2672, 2372, 2672];
+var desiredCourse = 2372;
+var desiredGrade = 90;
 var text = "";
 //this is probably unnecessary, but it helped me figure out what I was doing wrong.
 var i = 0;
@@ -23,7 +25,7 @@ var i = 0;
 //Since each array is coordinated, I only needed to fetch I and do a simple comparison.
 //A *better* implementation would be to do this server-side by querying the database through a Node server and passing it to a static page.
 for (i = 0; i < grades.length; i++) {
-  if (grades[i] >= 90 && courseCode[i] == 2372) {
+  if (grades[i] >= desiredGrade && courseCode[i] == desiredCourse) {
      text += "<br>Email: " + email[i];
      text += " Name: " + names[i];
    }
